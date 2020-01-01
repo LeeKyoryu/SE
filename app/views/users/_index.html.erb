@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>玩家列表</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>头像</th>
+      <th>昵称</th>
+      <th>邮箱</th>
+      <th>当前关卡</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <%= will_paginate %>
+  <ul class="users">
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= gravatar_for user, size: 50 %></td>
+        <td><%= link_to user.name, user %></td>
+        <td><%= user.email %></td>
+        <td><%= user.showLevel %></td>
+        <% if current_user.admin? && !current_user?(user) %>
+          <td><%= link_to '主页', user %></td>
+          <td><%= link_to '编辑', edit_user_path(user) %></td>
+          <td><%= link_to '删除', user, method: :delete, data: { confirm: '确定删除该玩家？' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </ul>
+  <%= will_paginate %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '注册新玩家', new_user_path %>
