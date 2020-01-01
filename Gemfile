@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.1'
 gem 'rgl'
 gem 'ruby-graphviz'
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.4.1'
 gem 'faker', '1.6.3'
 gem 'rails-controller-testing'
 gem 'will_paginate', '3.1.5'
