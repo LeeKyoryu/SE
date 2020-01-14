@@ -1,0 +1,23 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <%= render 'share/error_messages', user: @user, 
+      show_message: "#{user.errors.count}个错误阻止了新账号的创建：" %>
+
+  <div class="field">
+    <%= form.label :name, "昵称" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, "邮箱" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+	  <%= form.label :password, "密码" %>
+	  <%= form.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "提交" %>
+  </div>
+<% end %>

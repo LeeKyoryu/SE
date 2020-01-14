@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= gravatar_for @user, size: 80 %>
+  <strong><%= @user.name %></strong>
+</p>
+
+<% if @user.level < 8 %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, url: game_path) do |f| %>
+        <%= f.label :data, "当前关卡：" + @user.level.to_s %>
+        <%= f.label :image, image_tag("#{@user.level}.png") %>
+        <% (edges(@user.level)+1).times do |i| %>
+          <% sym = "text" + i.to_s %>
+          <%= f.label "第#{i+1}步" %>
+          <%= f.text_area sym.to_sym, "cols" => 4, "rows" => 1 %>
+        <% end %>
+        <%= f.label "\n" %>
+        <%= f.submit "提交", class: "btn btn-primary" %>
+      <% end %>
+      
+    <div class="row">
+      <p><%= link_to "返回", @user %></p>
+      <aside class="col-md-4">
+        <section class="micropost_form">
+          <%= render 'share/micropost_form' %>
+        </section>
+      </aside>
+      <div class="col-md-8">
+        <h3>最新评论</h3>
+        <%= render 'share/feed' %>
+      </div>
+    </div>
+  </div>
+
+<% else %>
+  <strong>恭喜！您已经完成了所有关卡。敬请期待后续关卡。</strong>
+  如需重置关卡，敬请
+  <%= link_to '返回', @user %>
+  个人主页。
+<% end %>

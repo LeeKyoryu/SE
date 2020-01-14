@@ -1,0 +1,9 @@
+<%= render 'share/error_messages', user: @micropost, 
+    show_message: "#{@micropost.errors.count}个错误阻止了留言的发送：" %>
+
+<%= form_for(@micropost) do |f| %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "发表留言吧..." %>
+  </div>
+  <%= f.submit "留言", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,7 @@
+<%= form_for(:session, url: chongzhi_path) do |f| %>
+  <%= f.label "选择关卡：(1~7)" %>
+  <%= f.text_area :level, "cols" => 4, "rows" => 1 %>
+  <%= f.label "\n" %>
+  <%= f.submit "确定", class: "btn btn-primary" %>
+<% end %>
+<p><%= link_to "取消", current_user %></p>

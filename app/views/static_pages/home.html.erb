@@ -1,0 +1,10 @@
+
+  <div class="center jumbotron">
+  <%= image_tag("Logo.png") %>
+  <h2></h2>
+
+<!-- link_to(text, route, class)，text是带有超链接的文本，route是具名路由，class是目标 -->
+<!-- 具名路由：根据routes.rb中定义的路由操作生成*_path或*_url标志，作为对应页面的简便表示 -->
+  <%= link_to "登录", login_url %>
+  <%= link_to "注册", new_user_url, class: "btn btn-lg btn-primary" %>
+</div>

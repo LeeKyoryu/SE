@@ -1,0 +1,55 @@
+I, [2020-01-14T20:38:17.489299 #1068]  INFO -- : [63c311ea-67a9-4e58-af43-6fef574ab0de] Started GET "/" for 123.114.243.12 at 2020-01-14 20:38:17 +0800
+I, [2020-01-14T20:38:17.490393 #1068]  INFO -- : [63c311ea-67a9-4e58-af43-6fef574ab0de] Processing by StaticPagesController#home as HTML
+I, [2020-01-14T20:38:17.502853 #1068]  INFO -- : [63c311ea-67a9-4e58-af43-6fef574ab0de]   Rendering static_pages/home.html.erb within layouts/application
+I, [2020-01-14T20:38:17.504325 #1068]  INFO -- : [63c311ea-67a9-4e58-af43-6fef574ab0de]   Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+I, [2020-01-14T20:38:17.504652 #1068]  INFO -- : [63c311ea-67a9-4e58-af43-6fef574ab0de] Completed 500 Internal Server Error in 14ms
+F, [2020-01-14T20:38:17.505458 #1068] FATAL -- : [63c311ea-67a9-4e58-af43-6fef574ab0de]   
+F, [2020-01-14T20:38:17.505531 #1068] FATAL -- : [63c311ea-67a9-4e58-af43-6fef574ab0de] ActionView::Template::Error (The asset "Logo.png" is not present in the asset pipeline.):
+F, [2020-01-14T20:38:17.505806 #1068] FATAL -- : [63c311ea-67a9-4e58-af43-6fef574ab0de]     1: 
+[63c311ea-67a9-4e58-af43-6fef574ab0de]     2:   <div class="center jumbotron">
+[63c311ea-67a9-4e58-af43-6fef574ab0de]     3:   <%= image_tag("Logo.png") %>
+[63c311ea-67a9-4e58-af43-6fef574ab0de]     4:   <h2></h2>
+[63c311ea-67a9-4e58-af43-6fef574ab0de]     5: 
+[63c311ea-67a9-4e58-af43-6fef574ab0de]     6: <!-- link_to(text, route, class)，text是带有超链接的文本，route是具名路由，class是目标 -->
+F, [2020-01-14T20:38:17.505864 #1068] FATAL -- : [63c311ea-67a9-4e58-af43-6fef574ab0de]   
+F, [2020-01-14T20:38:17.505952 #1068] FATAL -- : [63c311ea-67a9-4e58-af43-6fef574ab0de] app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___807476698936398363_43442280'
+I, [2020-01-14T20:38:17.665001 #1068]  INFO -- : [23445684-532a-439c-8348-74a1785a17ee] Started GET "/favicon.ico" for 123.114.243.12 at 2020-01-14 20:38:17 +0800
+F, [2020-01-14T20:38:17.665876 #1068] FATAL -- : [23445684-532a-439c-8348-74a1785a17ee]   
+F, [2020-01-14T20:38:17.665999 #1068] FATAL -- : [23445684-532a-439c-8348-74a1785a17ee] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+F, [2020-01-14T20:38:17.666199 #1068] FATAL -- : [23445684-532a-439c-8348-74a1785a17ee]   
+F, [2020-01-14T20:38:17.666353 #1068] FATAL -- : [23445684-532a-439c-8348-74a1785a17ee] actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+[23445684-532a-439c-8348-74a1785a17ee] railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+[23445684-532a-439c-8348-74a1785a17ee] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[23445684-532a-439c-8348-74a1785a17ee] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[23445684-532a-439c-8348-74a1785a17ee] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[23445684-532a-439c-8348-74a1785a17ee] railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+[23445684-532a-439c-8348-74a1785a17ee] puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+[23445684-532a-439c-8348-74a1785a17ee] puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+[23445684-532a-439c-8348-74a1785a17ee] puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+[23445684-532a-439c-8348-74a1785a17ee] puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+I, [2020-01-14T20:39:07.986838 #1068]  INFO -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e] Started GET "/" for 123.114.243.12 at 2020-01-14 20:39:07 +0800
+I, [2020-01-14T20:39:07.987580 #1068]  INFO -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e] Processing by StaticPagesController#home as HTML
+I, [2020-01-14T20:39:07.988256 #1068]  INFO -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]   Rendering static_pages/home.html.erb within layouts/application
+I, [2020-01-14T20:39:07.989001 #1068]  INFO -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]   Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+I, [2020-01-14T20:39:07.989139 #1068]  INFO -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e] Completed 500 Internal Server Error in 1ms
+F, [2020-01-14T20:39:07.989777 #1068] FATAL -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]   
+F, [2020-01-14T20:39:07.989822 #1068] FATAL -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e] ActionView::Template::Error (The asset "Logo.png" is not present in the asset pipeline.):
+F, [2020-01-14T20:39:07.989906 #1068] FATAL -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]     1: 
+[fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]     2:   <div class="center jumbotron">
+[fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]     3:   <%= image_tag("Logo.png") %>
+[fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]     4:   <h2></h2>
+[fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]     5: 
+[fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]     6: <!-- link_to(text, route, class)，text是带有超链接的文本，route是具名路由，class是目标 -->
+F, [2020-01-14T20:39:07.989944 #1068] FATAL -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e]   
+F, [2020-01-14T20:39:07.989978 #1068] FATAL -- : [fdc74b22-4d9e-4b90-b82f-fc9343e0ad6e] app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___807476698936398363_43442280'
