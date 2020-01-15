@@ -12,6 +12,6 @@
   password = "11"
   User.create(name:  name,
                email: email,
-               data: '0',
+               data: '1',
                password:              password)
 end
